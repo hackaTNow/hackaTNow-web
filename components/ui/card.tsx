@@ -3,22 +3,14 @@ import { cn } from "@/lib/utils";
 
 const Card = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
   ({ className, ...props }, ref) => {
-    const [isClicked, setIsClicked] = useState(false);
-
-    console.log(isClicked);
-    const handleClick = () => {
-      setIsClicked((prevClicked) => !prevClicked);
-    };
 
     return (
       <div
         ref={ref}
         className={cn(
           "rounded-lg border border-gray-200 text-gray-950 shadow-sm",
-          isClicked ? "bg-[#b0d8f5]" : "", // 클릭 상태일 때 배경색 적용
           className
         )}
-        onClick={handleClick} // 클릭 이벤트 핸들러 추가
         {...props}
       />
     );
