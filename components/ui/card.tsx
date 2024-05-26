@@ -5,6 +5,7 @@ const Card = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElemen
   ({ className, ...props }, ref) => {
     const [isClicked, setIsClicked] = useState(false);
 
+    console.log(isClicked);
     const handleClick = () => {
       setIsClicked((prevClicked) => !prevClicked);
     };

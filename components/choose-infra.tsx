@@ -2,7 +2,10 @@ import { Button } from "@/components/ui/button"
 import { Header } from "./ui/header"
 import { Footer } from "./ui/footer"
 import { Card } from "./ui/card"
-import { useEffect } from "react";
+import * as PopoverPrimitive from "@radix-ui/react-popover";
+import { Car } from "lucide-react";
+
+const PopoverTrigger = PopoverPrimitive.Trigger
 
 export function ChooseInfra() {
 
@@ -70,28 +73,62 @@ export function ChooseInfra() {
                       S3 Buckets
                     </span>
                   </Card>
-                  <Card className="flex flex-col items-center justify-center gap-2 rounded-lg border p-4 shadow-sm transition-all hover:bg-[#b0d8f5]/90 transition-colors duration-300">
-                    <SquareFunctionIcon className="h-8 w-8 text-[#6c7c8a] transition-colors duration-300" />
-                    <span
-                      className="text-sm font-medium"
-                      style={{
-                        fontFamily: "'Poppins', sans-serif",
-                      }}
-                    >
-                      Lambda Functions
-                    </span>
-                  </Card>
-                  <Card className="flex flex-col items-center justify-center gap-2 rounded-lg border p-4 shadow-sm transition-all hover:bg-[#b0d8f5]/90 transition-colors duration-300">
-                    <DatabaseIcon className="h-8 w-8 text-[#6c7c8a] transition-colors duration-300" />
-                    <span
-                      className="text-sm font-medium"
-                      style={{
-                        fontFamily: "'Poppins', sans-serif",
-                      }}
-                    >
-                      RDS Databases
-                    </span>
-                  </Card>
+                  <PopoverPrimitive.Root>
+                      <PopoverPrimitive.Trigger asChild>
+                        <Card className="flex flex-col items-center justify-center gap-2 rounded-lg border p-4 shadow-sm transition-all hover:bg-[#b0d8f5]/90 transition-colors duration-300 cursor-pointer">
+                          <DatabaseIcon className="h-8 w-8 text-[#6c7c8a] transition-colors duration-300" />
+                          <span
+                            className="text-sm font-medium"
+                            style={{
+                              fontFamily: "'Poppins', sans-serif",
+                            }}
+                          >
+                            RDS Databases
+                          </span>
+                        </Card>
+                      </PopoverPrimitive.Trigger>
+                      <PopoverPrimitive.Content
+                        align="center"
+                        sideOffset={10}
+                        className="z-50 p-4 bg-white rounded-lg shadow-lg outline-none"
+                      >
+                        <div className="grid grid-cols-2 gap-4">
+                          <PopoverPrimitive.Root>
+                          <PopoverTrigger asChild>
+                            <Card
+                              className="flex flex-col items-center justify-center gap-2 rounded-lg border border-gray-200 bg-white p-4 shadow-sm transition-all hover:bg-[#b0d8f5]/90 transition-colors duration-300">
+                              <DatabaseIcon className="h-8 w-8 text-[#6c7c8a] transition-colors duration-300" />
+                              <span
+                                className="text-sm font-medium"
+                                style={{
+                                  fontFamily: "Poppins, sans-serif",
+                                }}
+                              >
+                                MySQL
+                              </span>
+                            </Card>
+                          </PopoverTrigger>
+                          </PopoverPrimitive.Root>
+                          <PopoverPrimitive.Root>
+                          <PopoverTrigger asChild>
+                            <Card
+                              className="flex flex-col items-center justify-center gap-2 rounded-lg border border-gray-200 bg-white p-4 shadow-sm transition-all hover:bg-[#b0d8f5]/90 transition-colors duration-300">
+                              <DatabaseIcon className="h-8 w-8 text-[#6c7c8a] transition-colors duration-300" />
+                              <span
+                                className="text-sm font-medium"
+                                style={{
+                                  fontFamily: "Poppins, sans-serif",
+                                }}
+                              >
+                                MongoDB
+                              </span>
+                            </Card>
+                          </PopoverTrigger>
+                          </PopoverPrimitive.Root>
+                        </div>
+                        <PopoverPrimitive.Arrow className="fill-current text-white" />
+                      </PopoverPrimitive.Content>
+                    </PopoverPrimitive.Root>
                 </div>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
                   <Button
