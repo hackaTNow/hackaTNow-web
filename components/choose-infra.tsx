@@ -88,8 +88,6 @@ export function ChooseInfra() {
             return "/S3.png";
           case "ECR":
             return "/ECR.png";
-          default:
-            return "/placeholder.svg";
         }
       case 2:
         if (
@@ -138,7 +136,7 @@ export function ChooseInfra() {
           selectedResources.includes("EC2") &&
           selectedResources.includes("ECR")
         ) {
-          return "/EC2_RDS_ECR";
+          return "/EC2_RDS_ECR.png";
         }
         if (
           selectedResources.includes("RDS") &&
@@ -157,7 +155,7 @@ export function ChooseInfra() {
       case 4:
         return "/EC2_RDS_ECR_S3.png";
       default:
-        return "/placeholder.svg";
+        return "/PLACE_HOLDER.png";
     }
   };
   return (
@@ -349,9 +347,7 @@ export function ChooseInfra() {
                     src={renderInfrastructureDiagram()} // Use the
                     width="550"
                     style={
-                      selectedResources.length > 0
-                        ? { objectFit: "contain" }
-                        : null
+                      { objectFit: "contain" }
                     }
                   />
                 </div>
