@@ -44,7 +44,6 @@ export function Main() {
                       style={{
                         fontFamily: "\Poppins\, sans-serif\\",
                       }}
-                      variant="primary"
                     >
                       Get Started
                     </Button>
