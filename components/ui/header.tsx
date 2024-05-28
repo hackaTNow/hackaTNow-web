@@ -31,7 +31,7 @@ export function Header() {
   )
 }
 
-function CloudIcon(props) {
+function CloudIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <>
     <span style={{ fontFamily: 'Arial, sans-serif', fontWeight: '', marginRight: '-5px', fontSize: '1.4em' }}>&lt;</span>
@@ -54,7 +54,7 @@ function CloudIcon(props) {
   )
 }
 
-function GithubIcon(props) {
+function GithubIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
