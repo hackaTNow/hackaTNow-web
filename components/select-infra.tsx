@@ -7,7 +7,7 @@ import React, { useEffect, useState } from "react";
 
 const PopoverTrigger = PopoverPrimitive.Trigger;
 
-export function ChooseInfra() {
+export function SelectInfra() {
   const [ec2Selected, setEc2Selected] = useState(false);
   const [s3Selected, setS3Selected] = useState(false);
   const [mysqlSelected, setMysqlSelected] = useState(false);
@@ -361,7 +361,7 @@ export function ChooseInfra() {
   );
 }
 
-function CpuIcon(props) {
+function CpuIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -389,7 +389,7 @@ function CpuIcon(props) {
   );
 }
 
-function DatabaseIcon(props) {
+function DatabaseIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -410,7 +410,7 @@ function DatabaseIcon(props) {
   );
 }
 
-function PaintBucketIcon(props) {
+function PaintBucketIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -432,7 +432,7 @@ function PaintBucketIcon(props) {
   );
 }
 
-function ContainerIcon(props) {
+function ContainerIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}

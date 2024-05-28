@@ -38,7 +38,7 @@ export function Main() {
                   </p>
                 </div>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                  <Link href="/start">
+                  <Link href="/select-infra">
                     <Button
                       className="w-full min-[400px]:w-auto bg-[#b0d8f5] text-gray-900 hover:bg-[#b0d8f5]/90"
                       style={{
